@@ -8,7 +8,7 @@
     "stg": "build/bin/cli.js"
   },
   "scripts": {
-    "clean": "rm -fr build",
+    "clean": "rimraf build",
     "lint": "eslint --fix --ext .ts output/*.ts",
     "build": "npm run clean && tsc",
     "audit": "npm audit",

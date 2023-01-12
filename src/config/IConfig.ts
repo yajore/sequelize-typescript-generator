@@ -32,6 +32,9 @@ export interface IConfigMetadata {
     case?: TransformCase | TransformMap | TransformFn;
     associationsFile?: string;
     noViews?: boolean;
+    deletedAt?: boolean | any;
+    createdAt?: boolean | any;
+    updatedAt?: boolean | any;
 }
 
 export interface IConfigOutput {

@@ -446,6 +446,12 @@ import { IConfig, ModelBuilder, DialectMySQL } from 'sequelize-typescript-genera
         },
         metadata: {
             indices: true,
+            // model 中设为true,为了偏执表，具体查看：https://www.sequelize.cn/core-concepts/paranoid
+            timestamps: true, 
+            deletedAt: "deleted_at",
+            // https://www.sequelize.cn/core-concepts/model-basics#%E6%97%B6%E9%97%B4%E6%88%B3
+            createdAt: "create_time",
+            updatedAt: "update_time",
             associationsFile: 'path/to/associations.csv',            
         },
         output: {

@@ -129,6 +129,18 @@ export const caseTransformer = (
         },
         comment: tableMetadata.comment,
     };
+    if(tableMetadata.paranoid){
+        transformed.paranoid = tableMetadata.paranoid
+    }
+    if(tableMetadata.createdAt){
+        transformed.createdAt = tableMetadata.createdAt
+    }
+    if(tableMetadata.deletedAt){
+        transformed.deletedAt = tableMetadata.deletedAt
+    }
+    if(tableMetadata.updatedAt){
+        transformed.updatedAt = tableMetadata.updatedAt
+    }
 
     for (const [columnName, columnMetadata] of Object.entries(tableMetadata.columns)) {
 
